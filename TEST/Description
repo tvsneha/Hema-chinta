@@ -1,0 +1,15 @@
+<html>
+   <head>
+       <title>Descriptive</title>
+	</head>
+	<body>
+	   <center>
+	 <form action="question1.php" method="POST">
+     <h1>Details about test</h1>
+     <p>Total number of questions : 5</p>
+     <p>Total duraion = 10min </p>
+     <center><button onclick="qu()">START</button></center>
+	 </form>
+	 </center>
+    </body>
+</html>
