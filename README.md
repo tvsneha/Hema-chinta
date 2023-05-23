@@ -37,7 +37,7 @@ two.
 # Demo Video
 
 
-https://github.com/Hemachinta/RGM-Hackathon/assets/131182781/7062a969-53f7-4686-bd7b-61bfac4578dd
+https://github.com/Hemachinta/RGM-Hackathon/assets/131182781/510697e3-8efb-4ab2-aee4-d3cb9a9d5f85
 
 
 # Acknowledgement
