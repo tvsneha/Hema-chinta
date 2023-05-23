@@ -1,0 +1,63 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "test";
+
+$conn = new mysqli($servername, $username,'', $dbname);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$sql = mysqli_query($conn, "SELECT * FROM descriptive");
+
+   while($row = mysqli_fetch_array($sql)) {
+   $b[] = $row['Question'];
+   $c[]=$row['Answer'];
+}
+?> 
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> Fetch Data From Database </title> 
+	</head> 
+	<body>
+	<script>
+		var seconds=60;
+          function displayseconds(){
+               seconds -=1;
+			   if(seconds==10){
+				   alert("Time Remaining only 10 seconds");
+			   }
+               document.getElementById("secondsdisplay").innerText="Time remaining :"+seconds+"seconds";
+          }
+          setInterval(displayseconds,1000);
+          function redirect(){
+                 window.location.href="score.php"
+                
+          }
+          setTimeout("redirect()",60000);
+		</script>
+	<div id="secondsdisplay"></div>
+	<form name="testForm" action="score1.php" method="post">
+	    <label for="Roll">RollNO:</label>
+		<input type="text" name="roll" id="text"><br>
+		<p><b>Please enter first letter as Upper Case</b></p>
+	        <?php
+			    for($i=0;$i<sizeof($b);$i++)
+				{
+				  $a=$i+1;
+				  echo $a;
+				  echo $b[$i];
+				?>
+				
+			<br>
+			<label for="Answer">Answer</label>
+			<input type="text" name="<?php echo $i?>" id="Answer"><br>
+			<?php
+				}
+		    ?>
+		<input type="submit" value="submit">
+		</form>
+	</body>
+</html>
