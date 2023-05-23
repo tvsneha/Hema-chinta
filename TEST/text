@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Textfield</title>
+	</head>
+	<body>
+		<form action="insdesquestion.php" method="POST">
+			<label for="question">question</label>
+			<input type="text" name="question" id="question"><br>
+			<label for="answer">answer</label>
+			<input type="text" name="answer" id="answer"><br>
+			<input type="submit" value="submit">
+		</form>
+	</body>
+</html>
