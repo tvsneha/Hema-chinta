@@ -3,7 +3,7 @@ An online exam is a type of virtual exam undertaken on a computer device (deskto
 One can give and take an online examination from any location remotely.
 Many online exams are invigilated either through human proctors or through various types of proctoring software or using a mix of the 
 two.
-#Usage
+# Usage
 1.Install XAMPP software.
 2.Star Apache and MySQl.
 3.Select the admin button of MySQL ,it will open the Php Localhost.
@@ -12,7 +12,7 @@ two.
 6.Save all the code files into the C:\xampp\htdocs\Folder Name.
 7.Redirect from http://localhost/phpmyadmin/ to http://localhost/Folder Name/
 8.Run the codes.
-#Code Files
+# Code Files
 1 .Scheduler2.html : code to implement or start the countdown for the exam 
 2. test.html :The first user interface for the user after the countdown completed. It contains the        dropdown list to select the 
 3. type of exam.
@@ -27,7 +27,7 @@ two.
 10b. insquestion.php : The code to insert the mcqs questions into the database that are entered   in user interface.
 11a. text.html : The interface to the admin to enter the descriptive questions into the database.
 11b. insdesquestion.php : The code to insert the descriptive questions into the database that are entered in the user interface.
-#TEAM MEMBERS
+# TEAM MEMBERS
 1. B.Bharath Kumar Reddy  (Team Leader)
 2. C.Hemavathamma
 3. M.Gowthami
@@ -35,12 +35,10 @@ two.
 5. D.veera ManiTeja
 6. U.Vamsinatha Reddy
 7. Sneha
-#DEMO VIDEO
-https://github.com/Hemachinta/RGM-Hackathon/assets/131182781/c160c78f-001f-4380-b319-f25ed5306df6
-#Acknowledgement
+# Acknowledgement
 I would like to express my profound gratitude to RGMCET and BYTS INDIA for providing us a wonderful opportunity to work on this project 
 and to gain knowledge over several topics.
-#Contact
+# Contact
 For any queries and feedback contact bharathboreddyo1@gmail.com
 
 
