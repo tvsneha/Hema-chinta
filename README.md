@@ -4,29 +4,28 @@ One can give and take an online examination from any location remotely.
 Many online exams are invigilated either through human proctors or through various types of proctoring software or using a mix of the 
 two.
 # Usage
-1.Install XAMPP software.
-2.Star Apache and MySQl.
-3.Select the admin button of MySQL ,it will open the Php Localhost.
-4.Create database and tables for descriptive,MCQs and finalres.
-5.Insert the questions into the database.
-6.Save all the code files into the C:\xampp\htdocs\Folder Name.
-7.Redirect from http://localhost/phpmyadmin/ to http://localhost/Folder Name/
-8.Run the codes.
+ * 1.Install XAMPP software.
+* 2.Star Apache and MySQl.
+* 3.Select the admin button of MySQL ,it will open the Php Localhost.
+* 4.Create database and tables for descriptive,MCQs and finalres.
+* 5.Insert the questions into the database.
+* 6.Save all the code files into the C:\xampp\htdocs\Folder Name.
+* 7.Redirect from http://localhost/phpmyadmin/ to http://localhost/Folder Name/
+* 8.Run the codes.
 # Code Files
-1 .Scheduler2.html : code to implement or start the countdown for the exam 
-2. test.html :The first user interface for the user after the countdown completed. It contains the        dropdown list to select the 
-3. type of exam.
-4. MCQs.html : It will show the deails about the exam i.e. number of questions, total time .
-5. new1.php : The code to retrive the MCQs Questions from the Database.
-6. score.php : The code to show the results after the Completion of exam.
-7. Description.html : The code to show the details about the exam after selecting descrptive type exam        in the dropdown list
-8. question1.php : The code to retrive the descriptive Questions from the Database.
-9. Score1.php :The code to process the answers and show the results.
-10. finalres.php : The code to show all the students results to the admin.
-10a. mcqins.html : The interface to the admin to enter the mcqs questions into the database.
-10b. insquestion.php : The code to insert the mcqs questions into the database that are entered   in user interface.
-11a. text.html : The interface to the admin to enter the descriptive questions into the database.
-11b. insdesquestion.php : The code to insert the descriptive questions into the database that are entered in the user interface.
+* Scheduler2.html : code to implement or start the countdown for the exam 
+* test.html :The first user interface for the user after the countdown completed. It contains the        dropdown list to select the  type of exam.
+* MCQs.html : It will show the deails about the exam i.e. number of questions, total time .
+* new1.php : The code to retrive the MCQs Questions from the Database.
+* score.php : The code to show the results after the Completion of exam.
+* Description.html : The code to show the details about the exam after selecting descrptive type exam        in the dropdown list
+* question1.php : The code to retrive the descriptive Questions from the Database.
+* Score1.php :The code to process the answers and show the results.
+* finalres.php : The code to show all the students results to the admin.
+* mcqins.html : The interface to the admin to enter the mcqs questions into the database.
+* insquestion.php : The code to insert the mcqs questions into the database that are entered   in user interface.
+* text.html : The interface to the admin to enter the descriptive questions into the database.
+* insdesquestion.php : The code to insert the descriptive questions into the database that are entered in the user interface.
 # TEAM MEMBERS
 1. B.Bharath Kumar Reddy  (Team Leader)
 2. C.Hemavathamma
