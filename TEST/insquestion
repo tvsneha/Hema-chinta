@@ -1,0 +1,27 @@
+<?php
+
+
+$conn = mysqli_connect('localhost', 'root', '', 'test');
+
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$question = $_POST['question'];
+$option1 = $_POST['option1'];
+$option2 = $_POST['option2'];
+$option3 = $_POST['option3'];
+$option4 = $_POST['option4'];
+$answer = $_POST['answer'];
+
+$sql = "INSERT INTO mcq(Question, Option1, Option2, Option3, Option4, Answer)
+        VALUES ('$question','$option1',$option2,$option3,$option4, '$answer')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "inserted";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
