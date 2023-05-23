@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exam Scheduler Countdown</title>
+  </head>
+  <body>
+    <h1>Exam Scheduler Countdown</h1>
+    <p id="countdown"></p>
+    <button onclick="startCountdown()">Scheduler</button>
+
+    <script>
+      function startCountdown() {
+        var examDate = new Date("May 22, 2023 20:40:00").getTime();
+
+        var countdownInterval = setInterval(function() {
+          var now = new Date().getTime();
+          var remainingTime = examDate - now;
+          var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+          var countdownElement = document.getElementById("countdown");
+          countdownElement.innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+          if (remainingTime < 0) {
+            clearInterval(countdownInterval);
+            window.location.href="test.html";
+          }
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
