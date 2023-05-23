@@ -44,7 +44,7 @@ https://github.com/Hemachinta/RGM-Hackathon/assets/131182781/510697e3-8efb-4ab2-
 I would like to express my profound gratitude to RGMCET and BYTS INDIA for providing us a wonderful opportunity to work on this project 
 and to gain knowledge over several topics.
 # Contact
-For any queries and feedback contact bharathboreddyo1@gmail.com
+For any queries and feedback contact bharathboreddy01@gmail.com
 
 
 
