@@ -1,0 +1,70 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "test";
+
+$conn = new mysqli($servername, $username,'', $dbname);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$sql = mysqli_query($conn, "SELECT * FROM mcq");
+$count=0;
+   while($row = mysqli_fetch_array($sql)) {
+   $b[] = $row['Question'];
+   $c[]=$row['Option1'];
+   $d[]=$row['Option2'];
+   $e[]=$row['Option3'];
+   $f[]=$row['Option4'];
+   $g[]=$row['Answer'];
+   $count=$count+1;
+   
+}
+?> 
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> Fetch Data From Database </title> 
+	</head> 
+	<body>
+	<script>
+		var seconds=60;
+          function displayseconds(){
+               seconds -=1;
+			   if(seconds==10){
+				   alert("Time Remaining only 10 seconds");
+			   }
+               document.getElementById("secondsdisplay").innerText="Time remaining :"+seconds+"seconds";
+          }
+          setInterval(displayseconds,1000);
+          function redirect(){
+                 window.location.href="score.php"
+                
+          }
+          setTimeout("redirect()",60000);
+		</script>
+	<div id="secondsdisplay"></div>
+	<form name="testForm" action="score.php" method="post">
+	    <label for="Roll">RollNO:</label>
+		<input type="text" name="roll" id="text"><br>
+	        <?php
+			    for($i=0;$i<sizeof($b);$i++)
+				{
+				  $a=$i+1;
+				  echo $a;
+				  echo $b[$i];
+				?>
+				
+			<br>
+			<input type="radio" name="<?php echo $i?>" value="A"><?php echo $c[$i];?><br>
+			<input type="radio" name="<?php echo $i?>"value="B"><?php echo $d[$i];?><br>
+			<input type="radio" name="<?php echo $i?>"value="C"><?php echo $e[$i];?><br>
+			<input type="radio" name="<?php echo $i?>" value="D"><?php echo $f[$i];?><br>
+			<?php
+				}
+		    ?>
+		<input type="submit" value="submit">
+		</form>
+	</body>
+</html>
