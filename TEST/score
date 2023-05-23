@@ -1,0 +1,40 @@
+<?php error_reporting(E_ERROR | E_WARNING | E_PARSE);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "test";
+
+$conn = new mysqli($servername, $username,'', $dbname);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$sql = mysqli_query($conn, "SELECT * FROM mcq");
+$count=0;
+   while($row = mysqli_fetch_array($sql)) {
+   $b[] = $row['Question'];
+   $c[]=$row['Option1'];
+   $d[]=$row['Option2'];
+   $e[]=$row['Option3'];
+   $f[]=$row['Option4'];
+   $g[]=$row['Answer'];
+   $count=$count+1;
+   
+}
+$ct=0;
+$roll=$_POST['roll'];
+  for($i=0;$i<sizeof($b);$i++)
+  {
+	  if($g[$i]===$_POST[$i])
+	  {
+		  $ct++;
+	  }
+  }
+  echo  "Score : $ct";
+  $sql = "INSERT INTO `result`(`RollNo`, `Marks`) VALUES ('$roll','$ct')";
+  if (mysqli_query($conn, $sql)) {
+    echo " ";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+?>
