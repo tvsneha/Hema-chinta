@@ -33,7 +33,7 @@ two.
 4. G.Adithya Koudinya
 5. D.veera ManiTeja
 6. U.Vamsinatha Reddy
-7. Sneha
+7. T.VenkataSneha
 # Demo Video
 
 
